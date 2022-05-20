@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../logic/controller/theme_controller.dart';
+import '../../routes/routes.dart';
 
 class MainScreen extends StatelessWidget {
   final controller = Get.find<MainController>();
@@ -22,7 +23,9 @@ class MainScreen extends StatelessWidget {
               centerTitle: true,
               actions: [
                 IconButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.toNamed(Routes.cartScreen);
+                    },
                     icon: Image.asset("assets/images/shop.png")),
               ],
             ),
@@ -48,7 +51,7 @@ class MainScreen extends StatelessWidget {
                     color: Get.isDarkMode ? Colors.white : Colors.black,
                   ),
                   label: "",
-                  activeIcon: Icon(
+                  activeIcon: const Icon(
                     Icons.home,
                     color: mainColor,
                   ),
@@ -59,7 +62,7 @@ class MainScreen extends StatelessWidget {
                     color: Get.isDarkMode ? Colors.white : Colors.black,
                   ),
                   label: "",
-                  activeIcon: Icon(
+                  activeIcon: const Icon(
                     Icons.category,
                     color: mainColor,
                   ),
@@ -70,7 +73,7 @@ class MainScreen extends StatelessWidget {
                     color: Get.isDarkMode ? Colors.white : Colors.black,
                   ),
                   label: "",
-                  activeIcon: Icon(
+                  activeIcon: const Icon(
                     Icons.favorite,
                     color: mainColor,
                   ),
@@ -81,7 +84,7 @@ class MainScreen extends StatelessWidget {
                     color: Get.isDarkMode ? Colors.white : Colors.black,
                   ),
                   label: "",
-                  activeIcon: Icon(
+                  activeIcon: const Icon(
                     Icons.settings,
                     color: mainColor,
                   ),
