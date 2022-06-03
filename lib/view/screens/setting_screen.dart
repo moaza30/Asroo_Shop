@@ -19,7 +19,7 @@ class SettingScreen extends StatelessWidget {
                 ThemeController().changeTheme();
               },
               child: Text(
-                '${Get.isDarkMode ? "Light Mode" : "Dark Mode"}',
+                Get.isDarkMode ? "Light Mode" : "Dark Mode",
                 style: TextStyle(
                     color: Get.isDarkMode ? Colors.white : Colors.black),
               ),
@@ -49,7 +49,7 @@ class SettingScreen extends StatelessWidget {
                     buttonColor: Get.isDarkMode ? Colors.red : mainColor,
                   );
                 },
-                child: Text("Sign out"),
+                child: const Text("Sign out"),
               );
             }),
           ],
