@@ -3,6 +3,10 @@ import 'package:e_commerce/utils/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../logic/controller/theme_controller.dart';
+import '../widgets/settings/dark_mode_button.dart';
+import '../widgets/settings/log_out_widget.dart';
+import '../widgets/settings/profile_widget.dart';
+import '../widgets/text_utils.dart';
 
 class SettingScreen extends StatelessWidget {
   final controller = Get.find<AuthController>();
@@ -10,50 +14,39 @@ class SettingScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: context.theme.backgroundColor,
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            TextButton(
-              onPressed: () {
-                ThemeController().changeTheme();
-              },
-              child: Text(
-                Get.isDarkMode ? "Light Mode" : "Dark Mode",
-                style: TextStyle(
-                    color: Get.isDarkMode ? Colors.white : Colors.black),
-              ),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            GetBuilder<AuthController>(builder: (_) {
-              return TextButton(
-                onPressed: () {
-                  Get.defaultDialog(
-                    title: "Logout From App",
-                    titleStyle: const TextStyle(fontWeight: FontWeight.bold),
-                    middleText: "Are sure to logout?",
-                    textCancel: " No ",
-                    cancelTextColor:
-                        Get.isDarkMode ? Colors.white : Colors.black,
-                    textConfirm: " Yes ",
-                    confirmTextColor:
-                        Get.isDarkMode ? Colors.white : Colors.black,
-                    onCancel: () {
-                      Get.back();
-                    },
-                    onConfirm: () {
-                      controller.signOut();
-                    },
-                    buttonColor: Get.isDarkMode ? Colors.red : mainColor,
-                  );
-                },
-                child: const Text("Sign out"),
-              );
-            }),
-          ],
-        ),
+      body: ListView(
+        padding: const EdgeInsets.all(15),
+        children: [
+          ProfileWidget(),
+          const SizedBox(
+            height: 5,
+          ),
+          Divider(
+            color: Get.isDarkMode ? Colors.white : Colors.grey,
+            thickness: 2,
+          ),
+          const SizedBox(
+            height: 15,
+          ),
+          TextUtils(
+            fontSize: 20,
+            text: "General",
+            textColor: mainColor,
+            underLine: TextDecoration.none,
+          ),
+          const SizedBox(
+            height: 15,
+          ),
+          darkModeWidget(),
+          const SizedBox(
+            height: 15,
+          ),
+          // languageWidget(),
+          const SizedBox(
+            height: 15,
+          ),
+          LogOutButton(),
+        ],
       ),
     );
   }
