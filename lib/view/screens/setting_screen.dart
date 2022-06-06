@@ -1,5 +1,6 @@
 import 'package:e_commerce/logic/controller/auth_controller.dart';
 import 'package:e_commerce/utils/theme.dart';
+import 'package:e_commerce/view/widgets/settings/language_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../logic/controller/theme_controller.dart';
@@ -30,7 +31,7 @@ class SettingScreen extends StatelessWidget {
           ),
           TextUtils(
             fontSize: 20,
-            text: "General",
+            text: "General".tr,
             textColor: mainColor,
             underLine: TextDecoration.none,
           ),
@@ -41,7 +42,7 @@ class SettingScreen extends StatelessWidget {
           const SizedBox(
             height: 15,
           ),
-          // languageWidget(),
+          languageWidget(),
           const SizedBox(
             height: 15,
           ),

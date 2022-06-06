@@ -4,8 +4,6 @@ import 'package:e_commerce/logic/controller/main_controller.dart';
 import 'package:e_commerce/utils/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import '../../logic/controller/theme_controller.dart';
 import '../../routes/routes.dart';
 
 class MainScreen extends StatelessWidget {
@@ -22,7 +20,7 @@ class MainScreen extends StatelessWidget {
             appBar: AppBar(
               backgroundColor: Get.isDarkMode ? darkGreyClr : mainColor,
               elevation: 0,
-              title: Text(controller.title[controller.currentIndex.value]),
+              title: Text(controller.title[controller.currentIndex.value].tr),
               centerTitle: true,
               actions: [
                 Obx(() {

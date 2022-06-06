@@ -49,7 +49,7 @@ class darkModeWidget extends StatelessWidget {
             width: 15,
           ),
           TextUtils(
-              text: "Dark Mode",
+              text: "Dark Mode".tr,
               fontSize: 20,
               textColor: Get.isDarkMode ? Colors.white : Colors.black,
               underLine: TextDecoration.none)

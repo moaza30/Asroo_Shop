@@ -51,7 +51,7 @@ class LogOutButton extends StatelessWidget {
                 width: 15,
               ),
               TextUtils(
-                  text: "Log Out",
+                  text: "Log Out".tr,
                   fontSize: 20,
                   textColor: Get.isDarkMode ? Colors.white : Colors.black,
                   underLine: TextDecoration.none)

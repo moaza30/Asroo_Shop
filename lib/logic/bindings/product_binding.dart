@@ -7,7 +7,7 @@ class ProductBinding extends Bindings {
   @override
   void dependencies() {
     Get.put(ProductController());
-    // lazyPut start after sime time
+    // lazyPut start after some time
     Get.lazyPut(
       () => CartController(),
     );
