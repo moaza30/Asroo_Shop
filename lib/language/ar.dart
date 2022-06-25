@@ -6,4 +6,12 @@ const Map<String, String> arabic = {
   "Category": "التصنيفات",
   "Favourites": "المفضل",
   "Settings": "الاعدادات",
+  "Pay Now": "ادفع الان",
+  "Payment Method": "طريقة الدفع",
+  "Shipping to": "الشحن",
+  "Payment": "الدفع",
+  "Delivery": "التوصيل",
+  "Phone": "ادخل رقم الهاتف",
+  "Cancel": "الغاء",
+  "Save": "حفظ",
 };

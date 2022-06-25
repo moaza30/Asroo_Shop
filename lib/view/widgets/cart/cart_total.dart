@@ -1,4 +1,5 @@
 import 'package:e_commerce/logic/controller/cart_controller.dart';
+import 'package:e_commerce/routes/routes.dart';
 import 'package:e_commerce/utils/theme.dart';
 import 'package:e_commerce/view/widgets/text_utils.dart';
 import 'package:flutter/material.dart';
@@ -39,7 +40,9 @@ class CartTotal extends StatelessWidget {
               child: SizedBox(
                 height: 60,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Get.toNamed(Routes.paymentScreen);
+                  },
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: const [
